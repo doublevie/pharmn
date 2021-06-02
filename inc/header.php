@@ -1,19 +1,4 @@
-<!DOCTYPE html >
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bulma.min.css">
-    <title>Document</title>
-</head>
-<body>
-
-
-
-
-
-    <nav class="navbar" role="navigation" aria-label="main navigation" style="background-color: #DBDBDB;">
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" style="background-color: #DBDBDB;">
         <div class="navbar-brand">
           <a class="navbar-item" href="/">
            <!-- <img src="media/logo.png" width="80" height="28">-->
@@ -33,28 +18,15 @@
               Home
             </a>
       
-            <a class="navbar-item">
-                Weight Gainers
-            </a>
-            <a class="navbar-item">
-                Weight Gainers
-            </a>
-            <a class="navbar-item">
-                Proteins & Amino
-            </a>
-      
-            <a class="navbar-item">
-                Pre-Workout
-            </a>
-      
-            <a class="navbar-item">
-                Recovery
-            </a>
-      
-            <a class="navbar-item">
-                Weight Loss
-            </a>
-      
+
+<?php
+
+for ($i=0; $i < count($categories) ; $i++) { 
+   print '<a class="navbar-item" href="cat.php?cat='.$i.'">'.$categories[$i]['name'].'</a>';
+}
+?>
+
+
             <div class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link">
                 More
@@ -92,24 +64,3 @@
           </div>
         </div>
       </nav>
-    
-
-
-
-<div class=" container is-widescreen" style="padding:30px;">
-
-    <input class="input is-primary" type="text" placeholder="Recherche">
-
-
-</div>
-
-
-
-
-
-
-
-</body>
-
-<script src="js/main.js"></script>
-</html>
